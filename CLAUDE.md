@@ -14,6 +14,10 @@ Site vitrine du CMS **Evently**. Evently permet de créer des sites web à parti
 - `a-propos.html` : équipe, objectifs du projet.
 - `assets/` : ressources, images, icônes.
 
+## Style
+
+- Palette de couleurs et direction artistique : voir `DA.md`.
+
 ## Conventions
 
 - Contenu du site en français.
