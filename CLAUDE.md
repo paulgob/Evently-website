@@ -5,18 +5,18 @@ Site vitrine du CMS **Evently**. Evently permet de créer des sites web à parti
 ## Stack
 
 - HTML / JavaScript / Three.JS / TailwindCSS
-- Aucune dépendance sans validation préalable.
+- Polices Google Fonts : Newsreader (titres) et Manrope (texte). Dépendance validée.
+- Aucune autre dépendance sans validation préalable.
+
+## Documents de référence
+
+- `ai-guide/design.md` : direction artistique, palette, typographie (mode clair uniquement). Toujours utiliser ces couleurs et polices, sans en inventer d'autres.
+- `ai-guide/lessons.md` : bonnes pratiques, conventions, principes de travail. Toujours le lire avant de commencer un développement.
+- `ai-guide/structure.md` : structure du site, structure d'une page, conventions de nommage. Toujours le lire avant de commencer un développement.
 
 ## Structure
 
-- `index.html` : accueil. Présentation d'Evently, bouton de téléchargement, liens vers les autres pages.
-- `documentation.html` : fonctionnement du CMS et guide d'installation.
-- `a-propos.html` : équipe, objectifs du projet.
-- `assets/` : ressources, images, icônes.
-
-## Style
-
-- Palette de couleurs et direction artistique : voir `DA.md`.
+- voir `ai-guide/structure.md` pour l'arborescence, la structure d'une page et les conventions de nommage.
 
 ## Conventions
 
@@ -24,10 +24,10 @@ Site vitrine du CMS **Evently**. Evently permet de créer des sites web à parti
 - Le header, la nav et le footer sont dupliqués dans chaque page : toute modification de l'un d'eux doit être reportée sur **toutes les pages**.
 - Responsive obligatoire (mobile d'abord).
 - Accessibilité de base : balises sémantiques, `alt` sur les images, contrastes suffisants.
+- Animations et 3D : respecter `prefers-reduced-motion` et prévoir une version allégée sur mobile.
 
 ## Méthode de travail
 
-- Lis `lessons.md` avant de commencer.
 - Si la demande est ambiguë, pose une question avant de coder.
 - Si quelque chose ne se passe pas comme prévu : arrête-toi, explique le problème et propose un nouveau plan avant de continuer.
 - Ne modifie que ce qui est demandé. Signale les améliorations possibles sans les appliquer.
@@ -45,7 +45,7 @@ Site vitrine du CMS **Evently**. Evently permet de créer des sites web à parti
 
 ## Apprentissage continu
 
-Après chaque correction de ma part, ajoute une règle dans `lessons.md` (crée-le s'il n'existe pas) :
+Après chaque correction de ma part, ajoute une règle dans `ai-guide/lessons.md` (crée-le s'il n'existe pas) :
 
 - une ligne par règle, formulée comme une consigne (« Toujours… » / « Ne jamais… ») ;
 - pas de doublon : reformule une règle existante plutôt que d'en ajouter une proche.
