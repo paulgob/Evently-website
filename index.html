@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Evently</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script
+            src="https://kit.fontawesome.com/606c8b9d8b.js"
+            crossorigin="anonymous"
+        ></script>
         <style type="text/tailwindcss">
             @theme {
                 --color-anthracite: #1e1e1e;
@@ -16,7 +20,7 @@
     <body class="bg-ivoire text-anthracite antialiased">
         <header class="flex min-h-svh flex-col">
             <div
-                class="flex flex-1 flex-col bg-[url('assets/images/hero-banner.webp')] bg-contain bg-bottom bg-no-repeat pb-[51vw] lg:bg-right-bottom lg:pb-0"
+                class="flex flex-1 flex-col bg-[url('assets/images/hero-banner.webp')] bg-cover bg-right bg-no-repeat"
             >
                 <div
                     class="relative flex items-center justify-between px-6 py-6 lg:px-10"
@@ -33,17 +37,7 @@
                             class="flex cursor-pointer items-center gap-3 text-xs font-medium uppercase tracking-[0.2em]"
                         >
                             Menu
-                            <svg
-                                aria-hidden="true"
-                                width="20"
-                                height="12"
-                                viewBox="0 0 20 12"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                            >
-                                <path d="M0 1h20M0 6h20M0 11h20" />
-                            </svg>
+                            <i class="fa-solid fa-bars"></i>
                         </button>
                         <ul
                             id="menu"
@@ -87,17 +81,7 @@
                         class="mt-10 flex w-fit cursor-pointer items-center gap-10 border border-anthracite px-6 py-4 text-xs font-medium tracking-[0.15em] uppercase transition-colors hover:bg-anthracite hover:text-ivoire lg:mt-16"
                     >
                         Télécharger
-                        <svg
-                            aria-hidden="true"
-                            width="80"
-                            height="12"
-                            viewBox="0 0 80 12"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.2"
-                        >
-                            <path d="M0 6h79M73 1l6 5-6 5" />
-                        </svg>
+                        <i class="fa-solid fa-arrow-right-long"></i>
                     </button>
                 </div>
             </div>
