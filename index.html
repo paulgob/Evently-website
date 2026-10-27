@@ -9,6 +9,15 @@
             src="https://kit.fontawesome.com/606c8b9d8b.js"
             crossorigin="anonymous"
         ></script>
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+                }
+            }
+        </script>
+        <script type="module" src="assets/js/scene-1.js"></script>
         <style type="text/tailwindcss">
             @theme {
                 --color-anthracite: #1e1e1e;
@@ -87,7 +96,7 @@
             </div>
 
             <section
-                class="grid gap-10 border-t border-anthracite/20 px-6 py-10 sm:grid-cols-3 lg:px-24 xl:px-40"
+                class="grid gap-10 border-t border-b border-anthracite/20 px-6 py-10 sm:grid-cols-3 lg:px-24 xl:px-40"
             >
                 <div>
                     <h2
@@ -139,6 +148,12 @@
             </section>
         </header>
 
+        <!-- 3D scenes -->
+        <section>
+            <canvas id="scene1" class="h-full w-full"></canvas>
+        </section>
+
+        <!-- Menu script -->
         <script>
             const menuToggle = document.getElementById("menu-toggle");
             const menu = document.getElementById("menu");
