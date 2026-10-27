@@ -24,7 +24,6 @@ Site vitrine du CMS **Evently**. Evently permet de créer des sites web à parti
 - Le header, la nav et le footer sont dupliqués dans chaque page : toute modification de l'un d'eux doit être reportée sur **toutes les pages**.
 - Responsive obligatoire (mobile d'abord).
 - Accessibilité de base : balises sémantiques, `alt` sur les images, contrastes suffisants.
-- Animations et 3D : respecter `prefers-reduced-motion` et prévoir une version allégée sur mobile.
 
 ## Méthode de travail
 
