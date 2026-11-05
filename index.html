@@ -19,19 +19,18 @@
         </script>
         <style type="text/tailwindcss">
             @theme {
-                --color-anthracite: #1e1e1e;
-                --color-accent: #d72638;
-                --color-ivoire: #f8f7f2;
+                --color-gray-light: #aaaaaa;
+                --color-gray-dark: #555555;
             }
         </style>
     </head>
-    <body class="bg-ivoire text-anthracite antialiased">
+    <body class="bg-black text-white antialiased">
         <header class="flex min-h-svh flex-col">
             <div
-                class="flex flex-1 flex-col bg-[url('assets/images/hero-banner.webp')] bg-cover bg-right bg-no-repeat"
+                class="flex flex-1 flex-col bg-[url('assets/images/hero-banner-dither.png')] bg-cover bg-center bg-no-repeat [image-rendering:pixelated]"
             >
                 <div
-                    class="relative flex items-center justify-between px-6 py-6 lg:px-10"
+                    class="relative flex items-center justify-between bg-black px-6 py-6 lg:px-10"
                 >
                     <span class="text-lg font-bold uppercase tracking-[0.25em]"
                         >Evently</span
@@ -49,26 +48,26 @@
                         </button>
                         <ul
                             id="menu"
-                            class="absolute top-full right-6 z-10 hidden min-w-48 flex-col border border-anthracite/20 bg-ivoire py-2 text-sm uppercase tracking-widest lg:right-10"
+                            class="absolute top-full right-6 z-10 hidden min-w-48 flex-col border border-gray-dark bg-black py-2 text-sm uppercase tracking-widest lg:right-10"
                         >
                             <li>
                                 <a
                                     href="#"
-                                    class="block px-5 py-2 hover:text-accent"
+                                    class="block px-5 py-2 hover:text-gray-light"
                                     >Télécharger</a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    class="block px-5 py-2 hover:text-accent"
+                                    class="block px-5 py-2 hover:text-gray-light"
                                     >Documentation</a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    class="block px-5 py-2 hover:text-accent"
+                                    class="block px-5 py-2 hover:text-gray-light"
                                     >A propos</a
                                 >
                             </li>
@@ -79,23 +78,25 @@
                 <div
                     class="flex flex-1 flex-col justify-center px-6 py-12 lg:px-24 xl:px-40"
                 >
-                    <h1
-                        class="max-w-xl text-4xl leading-none font-black tracking-wide uppercase sm:text-6xl xl:max-w-3xl xl:text-7xl"
-                    >
-                        Votre événement, votre site
-                    </h1>
-                    <button
-                        type="button"
-                        class="mt-10 flex w-fit cursor-pointer items-center gap-10 border border-anthracite px-6 py-4 text-xs font-medium tracking-[0.15em] uppercase transition-colors hover:bg-anthracite hover:text-ivoire lg:mt-16"
-                    >
-                        Télécharger
-                        <i class="fa-solid fa-arrow-right-long"></i>
-                    </button>
+                    <div class="w-fit bg-black p-6 sm:p-10">
+                        <h1
+                            class="max-w-xl text-4xl leading-none font-black tracking-wide uppercase sm:text-6xl xl:max-w-3xl xl:text-7xl"
+                        >
+                            Votre événement, votre site
+                        </h1>
+                        <button
+                            type="button"
+                            class="mt-10 flex w-fit cursor-pointer items-center gap-10 border border-white px-6 py-4 text-xs font-medium tracking-[0.15em] uppercase transition-colors hover:bg-white hover:text-black lg:mt-16"
+                        >
+                            Télécharger
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <section
-                class="grid gap-10 border-t border-b border-anthracite/20 px-6 py-10 sm:grid-cols-3 lg:px-24 xl:px-40"
+                class="grid gap-10 border-t border-b border-gray-dark px-6 py-10 sm:grid-cols-3 lg:px-24 xl:px-40"
             >
                 <div>
                     <h2
@@ -104,7 +105,7 @@
                         Design
                     </h2>
                     <p
-                        class="max-w-xs text-xs leading-relaxed text-anthracite/75"
+                        class="max-w-xs text-xs leading-relaxed text-gray-light"
                     >
                         Créez n'importe quel site web grâce à des outils de
                         conception flexibles et à la puissance des blocs. Partez
@@ -120,7 +121,7 @@
                         Personnalisation
                     </h2>
                     <p
-                        class="max-w-xs text-xs leading-relaxed text-anthracite/75"
+                        class="max-w-xs text-xs leading-relaxed text-gray-light"
                     >
                         Personnalisez chaque aspect de votre site web selon vos
                         besoins. Modifiez les couleurs, les polices et les
@@ -135,7 +136,7 @@
                         Optimisation
                     </h2>
                     <p
-                        class="max-w-xs text-xs leading-relaxed text-anthracite/75"
+                        class="max-w-xs text-xs leading-relaxed text-gray-light"
                     >
                         Optimisez votre site web pour les moteurs de recherche
                         et les performances. Assurez-vous que votre site se
