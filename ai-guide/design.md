@@ -15,27 +15,27 @@ Utiliser des œuvres classiques reconnaissables (sculptures antiques, peintures 
 
 ## 2. Couleurs du site
 
-Noir et blanc, avec des détails de gris. Les 4 niveaux sont ceux des images tramées (dithering) du site.
+Un socle neutre et élégant, avec des accents maîtrisés.
 
-Le site n'a qu'un **mode sombre** : pas de mode clair.
+Le site n'a qu'un **mode clair** : pas de mode sombre.
 
-| Rôle                         | Couleur                | Classe Tailwind               |
-| ---------------------------- | ---------------------- | ----------------------------- |
-| Fond principal               | `#000000` noir         | `bg-black`                    |
-| Texte principal              | `#FFFFFF` blanc        | `text-white`                  |
-| Texte secondaire, survol     | `#AAAAAA` gris clair   | `text-gray-light`             |
-| Bordures, détails graphiques | `#555555` gris foncé   | `border-gray-dark`            |
+| Rôle                      | Couleur                                                      |
+| ------------------------- | ------------------------------------------------------------ |
+| Fond principal            | `#F3EDE4` beige ivoire (papier, comme le fond de la planche) |
+| Texte principal           | `#1E1E1E` anthracite                                         |
+| Texte secondaire          | `#6B7280` gris                                               |
+| Fond secondaire, bordures | `#D1D1C4` gris pierre                                        |
+| Accent                    | `#D72638` rouge                                              |
 
-- `#555555` ne sert jamais pour du texte sur fond noir (contraste insuffisant).
-- Texte posé sur une image tramée : toujours sur un aplat noir pour rester lisible.
-- Images tramées : afficher avec `[image-rendering:pixelated]` pour garder la trame nette.
+- `#F8F7F2` (ivoire clair) reste utilisé pour le texte sur fond sombre ou coloré.
+- Exception : le hero de l'accueil est une scène de concert sur fond `#0F1115` (bleu nuit), avec un texte ivoire.
 
 ### Éléments d'interface
 
 | État              | HEX       |
 | ----------------- | --------- |
-| Actif / sélection | `#FFFFFF` |
-| Survol            | `#AAAAAA` |
+| Actif / sélection | `#D72638` |
+| Survol            | `#FEE2E2` |
 | Succès            | `#10B981` |
 | Avertissement     | `#F59E0B` |
 | Erreur            | `#EF4444` |

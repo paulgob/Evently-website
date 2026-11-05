@@ -5,32 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Evently</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script
-            src="https://kit.fontawesome.com/606c8b9d8b.js"
-            crossorigin="anonymous"
-        ></script>
-        <script type="importmap">
-            {
-                "imports": {
-                    "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
-                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
-                }
-            }
-        </script>
         <style type="text/tailwindcss">
             @theme {
-                --color-gray-light: #aaaaaa;
-                --color-gray-dark: #555555;
+                --color-anthracite: #1e1e1e;
+                --color-accent: #d72638;
+                --color-ivoire: #f8f7f2;
             }
         </style>
     </head>
-    <body class="bg-black text-white antialiased">
+    <body class="bg-ivoire text-anthracite antialiased">
         <header class="flex min-h-svh flex-col">
             <div
-                class="flex flex-1 flex-col bg-[url('assets/images/hero-banner-dither.png')] bg-cover bg-center bg-no-repeat [image-rendering:pixelated]"
+                class="flex flex-1 flex-col bg-[url('assets/images/hero-banner.webp')] bg-contain bg-bottom bg-no-repeat pb-[51vw] lg:bg-right-bottom lg:pb-0"
             >
                 <div
-                    class="relative flex items-center justify-between bg-black px-6 py-6 lg:px-10"
+                    class="relative flex items-center justify-between px-6 py-6 lg:px-10"
                 >
                     <span class="text-lg font-bold uppercase tracking-[0.25em]"
                         >Evently</span
@@ -44,30 +33,40 @@
                             class="flex cursor-pointer items-center gap-3 text-xs font-medium uppercase tracking-[0.2em]"
                         >
                             Menu
-                            <i class="fa-solid fa-bars"></i>
+                            <svg
+                                aria-hidden="true"
+                                width="20"
+                                height="12"
+                                viewBox="0 0 20 12"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                            >
+                                <path d="M0 1h20M0 6h20M0 11h20" />
+                            </svg>
                         </button>
                         <ul
                             id="menu"
-                            class="absolute top-full right-6 z-10 hidden min-w-48 flex-col border border-gray-dark bg-black py-2 text-sm uppercase tracking-widest lg:right-10"
+                            class="absolute top-full right-6 z-10 hidden min-w-48 flex-col border border-anthracite/20 bg-ivoire py-2 text-sm uppercase tracking-widest lg:right-10"
                         >
                             <li>
                                 <a
                                     href="#"
-                                    class="block px-5 py-2 hover:text-gray-light"
+                                    class="block px-5 py-2 hover:text-accent"
                                     >Télécharger</a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    class="block px-5 py-2 hover:text-gray-light"
+                                    class="block px-5 py-2 hover:text-accent"
                                     >Documentation</a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    class="block px-5 py-2 hover:text-gray-light"
+                                    class="block px-5 py-2 hover:text-accent"
                                     >A propos</a
                                 >
                             </li>
@@ -78,25 +77,33 @@
                 <div
                     class="flex flex-1 flex-col justify-center px-6 py-12 lg:px-24 xl:px-40"
                 >
-                    <div class="w-fit bg-black p-6 sm:p-10">
-                        <h1
-                            class="max-w-xl text-4xl leading-none font-black tracking-wide uppercase sm:text-6xl xl:max-w-3xl xl:text-7xl"
+                    <h1
+                        class="max-w-xl text-4xl leading-none font-black tracking-wide uppercase sm:text-6xl xl:max-w-3xl xl:text-7xl"
+                    >
+                        Votre événement, votre site
+                    </h1>
+                    <button
+                        type="button"
+                        class="mt-10 flex w-fit cursor-pointer items-center gap-10 border border-anthracite px-6 py-4 text-xs font-medium tracking-[0.15em] uppercase transition-colors hover:bg-anthracite hover:text-ivoire lg:mt-16"
+                    >
+                        Télécharger
+                        <svg
+                            aria-hidden="true"
+                            width="80"
+                            height="12"
+                            viewBox="0 0 80 12"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.2"
                         >
-                            Votre événement, votre site
-                        </h1>
-                        <button
-                            type="button"
-                            class="mt-10 flex w-fit cursor-pointer items-center gap-10 border border-white px-6 py-4 text-xs font-medium tracking-[0.15em] uppercase transition-colors hover:bg-white hover:text-black lg:mt-16"
-                        >
-                            Télécharger
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                    </div>
+                            <path d="M0 6h79M73 1l6 5-6 5" />
+                        </svg>
+                    </button>
                 </div>
             </div>
 
             <section
-                class="grid gap-10 border-t border-b border-gray-dark px-6 py-10 sm:grid-cols-3 lg:px-24 xl:px-40"
+                class="grid gap-10 border-t border-anthracite/20 px-6 py-10 sm:grid-cols-3 lg:px-24 xl:px-40"
             >
                 <div>
                     <h2
@@ -105,7 +112,7 @@
                         Design
                     </h2>
                     <p
-                        class="max-w-xs text-xs leading-relaxed text-gray-light"
+                        class="max-w-xs text-xs leading-relaxed text-anthracite/75"
                     >
                         Créez n'importe quel site web grâce à des outils de
                         conception flexibles et à la puissance des blocs. Partez
@@ -121,7 +128,7 @@
                         Personnalisation
                     </h2>
                     <p
-                        class="max-w-xs text-xs leading-relaxed text-gray-light"
+                        class="max-w-xs text-xs leading-relaxed text-anthracite/75"
                     >
                         Personnalisez chaque aspect de votre site web selon vos
                         besoins. Modifiez les couleurs, les polices et les
@@ -136,7 +143,7 @@
                         Optimisation
                     </h2>
                     <p
-                        class="max-w-xs text-xs leading-relaxed text-gray-light"
+                        class="max-w-xs text-xs leading-relaxed text-anthracite/75"
                     >
                         Optimisez votre site web pour les moteurs de recherche
                         et les performances. Assurez-vous que votre site se
@@ -148,12 +155,6 @@
             </section>
         </header>
 
-        <!-- 3D scenes -->
-        <section>
-            <canvas id="scene1" class="h-full w-full"></canvas>
-        </section>
-
-        <!-- Menu script -->
         <script>
             const menuToggle = document.getElementById("menu-toggle");
             const menu = document.getElementById("menu");

@@ -8,7 +8,6 @@
 - `mentions-legales.html` : mentions légales et sources des œuvres.
 - `assets/images/` : images et icônes.
 - `assets/js/` : scripts partagés entre plusieurs pages.
-- `assets/3d-models/` : modèles 3D pour les scènes.
 - `ai-guide/` : documents de référence pour l'IA (design, structure, leçons).
 
 ## 2. Structure d'une page
