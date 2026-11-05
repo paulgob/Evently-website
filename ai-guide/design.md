@@ -29,6 +29,7 @@ Le site n'a qu'un **mode sombre** : pas de mode clair.
 - `#555555` ne sert jamais pour du texte sur fond noir (contraste insuffisant).
 - Texte posé sur une image tramée : toujours sur un aplat noir pour rester lisible.
 - Images tramées : afficher avec `[image-rendering:pixelated]` pour garder la trame nette.
+- Scène 3D et images de fond qui l'accompagnent : trame à **6 niveaux** pour plus de détail (`#000000`, `#333333`, `#666666`, `#999999`, `#CCCCCC`, `#FFFFFF`). Ces gris intermédiaires restent réservés aux visuels tramés, jamais au texte ni à l'interface.
 
 ### Éléments d'interface
 

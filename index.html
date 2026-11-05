@@ -25,10 +25,10 @@
         </style>
     </head>
     <body class="bg-black text-white antialiased">
-        <header class="flex min-h-svh flex-col">
-            <div
-                class="flex flex-1 flex-col bg-[url('assets/images/hero-banner-dither.png')] bg-cover bg-center bg-no-repeat [image-rendering:pixelated]"
-            >
+        <header
+            class="flex min-h-svh flex-col bg-[url('assets/images/hero-banner-dither.png')] bg-cover bg-center bg-no-repeat [image-rendering:pixelated]"
+        >
+            <div class="flex flex-1 flex-col">
                 <div
                     class="relative flex items-center justify-between bg-black px-6 py-6 lg:px-10"
                 >
@@ -96,7 +96,7 @@
             </div>
 
             <section
-                class="grid gap-10 border-t border-b border-gray-dark px-6 py-10 sm:grid-cols-3 lg:px-24 xl:px-40"
+                class="grid gap-10 border-t border-b border-gray-dark bg-black/80 px-6 py-10 sm:grid-cols-3 lg:px-24 xl:px-40"
             >
                 <div>
                     <h2
@@ -148,10 +148,240 @@
             </section>
         </header>
 
-        <!-- 3D scenes -->
-        <section>
-            <canvas id="scene1" class="h-full w-full"></canvas>
-        </section>
+        <main>
+            <!-- Event types: dithered 3D shapes pinned behind the scrolling texts -->
+            <section
+                id="event-types"
+                aria-labelledby="event-types-title"
+                class="relative"
+            >
+                <div
+                    aria-hidden="true"
+                    class="pointer-events-none sticky top-0 h-svh overflow-hidden"
+                >
+                    <!-- Leonardo da Vinci, The Head of the Virgin, Met Museum (CC0) -->
+                    <img
+                        src="assets/images/head-of-the-virgin-dither.png"
+                        alt=""
+                        class="absolute top-0 right-0 h-3/5 w-full object-cover object-top opacity-35 [image-rendering:pixelated] [mask-image:linear-gradient(to_bottom,black_50%,transparent)] lg:h-full lg:w-1/2 lg:[mask-image:linear-gradient(to_right,transparent,black_40%)]"
+                    />
+                    <canvas
+                        id="pixel-scene"
+                        class="relative block h-full w-full [image-rendering:pixelated]"
+                    ></canvas>
+                </div>
+                <div class="relative -mt-[100svh]">
+                <article
+                    class="flex min-h-svh items-end px-6 py-12 lg:items-center lg:px-24 xl:px-40"
+                >
+                    <div
+                        class="w-full max-w-md border border-gray-dark bg-black p-6 sm:p-10"
+                    >
+                        <p class="text-xs font-medium tracking-[0.2em] text-gray-light uppercase">
+                            // Types d'événements
+                        </p>
+                        <h2
+                            id="event-types-title"
+                            class="mt-4 text-3xl leading-none font-black tracking-wide uppercase sm:text-5xl"
+                        >
+                            Un CMS, tous vos événements
+                        </h2>
+                        <p class="mt-6 text-sm leading-relaxed text-gray-light">
+                            Chaque événement a son énergie. Evently assemble les modules
+                            adaptés pour construire le site qui lui ressemble, pièce par
+                            pièce.
+                        </p>
+                    </div>
+                </article>
+                <article
+                    class="flex min-h-svh items-end px-6 py-12 lg:items-center lg:px-24 xl:px-40"
+                >
+                    <div
+                        class="w-full max-w-md border border-gray-dark bg-black p-6 sm:p-10"
+                    >
+                        <p
+                            class="flex items-center gap-3 text-xs font-medium tracking-[0.2em] text-gray-light uppercase"
+                        >
+                            <span class="size-2 bg-[#E6392E]"></span>
+                            // 01 — Musique
+                        </p>
+                        <h3
+                            class="mt-4 text-3xl leading-none font-black tracking-wide uppercase sm:text-4xl"
+                        >
+                            Faites vibrer la foule
+                        </h3>
+                        <p class="mt-6 text-sm leading-relaxed text-gray-light">
+                            Festivals, concerts, soirées : programmation par scène, fiches artistes et billetterie réunies sur un seul site.
+                        </p>
+                        <p
+                            class="mt-6 border-t border-gray-dark pt-4 text-xs tracking-[0.2em] text-white uppercase"
+                        >
+                            Énergie, rythme, liberté
+                        </p>
+                    </div>
+                </article>
+                <article
+                    class="flex min-h-svh items-end px-6 py-12 lg:items-center lg:px-24 xl:px-40"
+                >
+                    <div
+                        class="w-full max-w-md border border-gray-dark bg-black p-6 sm:p-10"
+                    >
+                        <p
+                            class="flex items-center gap-3 text-xs font-medium tracking-[0.2em] text-gray-light uppercase"
+                        >
+                            <span class="size-2 bg-[#2F6BFF]"></span>
+                            // 02 — Arts visuels
+                        </p>
+                        <h3
+                            class="mt-4 text-3xl leading-none font-black tracking-wide uppercase sm:text-4xl"
+                        >
+                            Donnez à voir
+                        </h3>
+                        <p class="mt-6 text-sm leading-relaxed text-gray-light">
+                            Vernissages, salons, résidences d'artistes : galeries d'œuvres, portraits des créateurs et agenda des rencontres.
+                        </p>
+                        <p
+                            class="mt-6 border-t border-gray-dark pt-4 text-xs tracking-[0.2em] text-white uppercase"
+                        >
+                            Création, regard
+                        </p>
+                    </div>
+                </article>
+                <article
+                    class="flex min-h-svh items-end px-6 py-12 lg:items-center lg:px-24 xl:px-40"
+                >
+                    <div
+                        class="w-full max-w-md border border-gray-dark bg-black p-6 sm:p-10"
+                    >
+                        <p
+                            class="flex items-center gap-3 text-xs font-medium tracking-[0.2em] text-gray-light uppercase"
+                        >
+                            <span class="size-2 bg-[#2E7D32]"></span>
+                            // 03 — Exposition
+                        </p>
+                        <h3
+                            class="mt-4 text-3xl leading-none font-black tracking-wide uppercase sm:text-4xl"
+                        >
+                            Transmettre
+                        </h3>
+                        <p class="mt-6 text-sm leading-relaxed text-gray-light">
+                            Musées, foires, expositions temporaires : parcours de visite, horaires et réservation de créneaux.
+                        </p>
+                        <p
+                            class="mt-6 border-t border-gray-dark pt-4 text-xs tracking-[0.2em] text-white uppercase"
+                        >
+                            Découverte, transmission
+                        </p>
+                    </div>
+                </article>
+                <article
+                    class="flex min-h-svh items-end px-6 py-12 lg:items-center lg:px-24 xl:px-40"
+                >
+                    <div
+                        class="w-full max-w-md border border-gray-dark bg-black p-6 sm:p-10"
+                    >
+                        <p
+                            class="flex items-center gap-3 text-xs font-medium tracking-[0.2em] text-gray-light uppercase"
+                        >
+                            <span class="size-2 bg-[#0B5ED7]"></span>
+                            // 04 — Sport
+                        </p>
+                        <h3
+                            class="mt-4 text-3xl leading-none font-black tracking-wide uppercase sm:text-4xl"
+                        >
+                            Repousser les limites
+                        </h3>
+                        <p class="mt-6 text-sm leading-relaxed text-gray-light">
+                            Marathons, tournois, courses : inscriptions, parcours, classements et informations pratiques pour les participants.
+                        </p>
+                        <p
+                            class="mt-6 border-t border-gray-dark pt-4 text-xs tracking-[0.2em] text-white uppercase"
+                        >
+                            Dépassement, collectif
+                        </p>
+                    </div>
+                </article>
+                <article
+                    class="flex min-h-svh items-end px-6 py-12 lg:items-center lg:px-24 xl:px-40"
+                >
+                    <div
+                        class="w-full max-w-md border border-gray-dark bg-black p-6 sm:p-10"
+                    >
+                        <p
+                            class="flex items-center gap-3 text-xs font-medium tracking-[0.2em] text-gray-light uppercase"
+                        >
+                            <span class="size-2 bg-[#8B5CF6]"></span>
+                            // 05 — Cinéma
+                        </p>
+                        <h3
+                            class="mt-4 text-3xl leading-none font-black tracking-wide uppercase sm:text-4xl"
+                        >
+                            Raconter des histoires
+                        </h3>
+                        <p class="mt-6 text-sm leading-relaxed text-gray-light">
+                            Festivals de films, avant-premières, ciné-clubs : programme des séances, fiches des films et palmarès.
+                        </p>
+                        <p
+                            class="mt-6 border-t border-gray-dark pt-4 text-xs tracking-[0.2em] text-white uppercase"
+                        >
+                            Émotion, narration
+                        </p>
+                    </div>
+                </article>
+                <article
+                    class="flex min-h-svh items-end px-6 py-12 lg:items-center lg:px-24 xl:px-40"
+                >
+                    <div
+                        class="w-full max-w-md border border-gray-dark bg-black p-6 sm:p-10"
+                    >
+                        <p
+                            class="flex items-center gap-3 text-xs font-medium tracking-[0.2em] text-gray-light uppercase"
+                        >
+                            <span class="size-2 bg-[#D72638]"></span>
+                            // 06 — Spectacle vivant
+                        </p>
+                        <h3
+                            class="mt-4 text-3xl leading-none font-black tracking-wide uppercase sm:text-4xl"
+                        >
+                            Entrer en scène
+                        </h3>
+                        <p class="mt-6 text-sm leading-relaxed text-gray-light">
+                            Théâtre, danse, cirque : distribution, calendrier des représentations et réservation des places.
+                        </p>
+                        <p
+                            class="mt-6 border-t border-gray-dark pt-4 text-xs tracking-[0.2em] text-white uppercase"
+                        >
+                            Mouvement, émotion
+                        </p>
+                    </div>
+                </article>
+                <article
+                    class="flex min-h-svh items-end px-6 py-12 lg:items-center lg:px-24 xl:px-40"
+                >
+                    <div
+                        class="w-full max-w-md border border-gray-dark bg-black p-6 sm:p-10"
+                    >
+                        <p
+                            class="text-xs font-medium tracking-[0.2em] text-gray-light uppercase"
+                        >
+                            // Et le vôtre ?
+                        </p>
+                        <h3
+                            class="mt-4 text-3xl leading-none font-black tracking-wide uppercase sm:text-4xl"
+                        >
+                            Votre événement, pièce par pièce
+                        </h3>
+                        <p class="mt-6 text-sm leading-relaxed text-gray-light">
+                            Quel que soit votre événement, choisissez vos modules :
+                            Evently assemble le site qui lui ressemble.
+                        </p>
+                    </div>
+                </article>
+                </div>
+            </section>
+        </main>
+
+        <script type="module" src="assets/js/event-types-scene.js"></script>
 
         <!-- Menu script -->
         <script>
